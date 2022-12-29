@@ -3,7 +3,6 @@ package com.keybank.offers.controller;
 import com.keybank.offers.exception.BussinessException;
 import com.keybank.offers.exception.OffersRequestInvalidException;
 import com.keybank.offers.exception.SystemException;
-import com.keybank.offers.model.CardDetailsRequest;
 import com.keybank.offers.model.OffersRequest;
 import com.keybank.offers.model.OffersResponse;
 import com.keybank.offers.service.IOffersDetailsService;
@@ -16,9 +15,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 @RestController
 @RequestMapping("/v1")
