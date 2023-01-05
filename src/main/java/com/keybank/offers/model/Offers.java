@@ -2,6 +2,8 @@ package com.keybank.offers.model;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class Offers {
     private String offerId;
@@ -9,7 +11,7 @@ public class Offers {
     private String description;
     private String expDate;
     private String imageUrl;
-    private String creationDate;
+    private Date creationDate;
     private String stock;
     private String offersType;
 

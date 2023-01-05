@@ -5,8 +5,11 @@ import com.keybank.offers.exception.OffersRequestInvalidException;
 import com.keybank.offers.exception.SystemException;
 import com.keybank.offers.model.OffersResponse;
 import com.keybank.offers.model.StatusBlock;
+import org.springframework.http.MediaType;
+import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
@@ -48,5 +51,11 @@ public class OffersDetailsControllerAdvice {
 
         offersResponse.setStatusBlock(statusBlock);
         return offersResponse;
+    }
+
+    @ResponseBody
+    @ExceptionHandler(HttpMediaTypeNotAcceptableException.class)
+    public String handleHttpMediaTypeNotAcceptableException() {
+        return "acceptable MIME type:" + MediaType.APPLICATION_JSON_VALUE;
     }
 }

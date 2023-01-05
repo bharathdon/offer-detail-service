@@ -4,9 +4,15 @@ import lombok.Data;
 
 @Data
 public class CardDetailsResponse {
+
+    private String cardNum;
+    private String cvv;
+    private String expDate;
+    private String nameOnCard;
     private String enrollmentDate;
     private String status;
-    private String lastUpdateDate;
-    private String isRenewal;
-    private String cardProduct;
+    public Boolean isPrimary;
+    private String productCode;
+    private String productType;
+    private String renewal;
 }

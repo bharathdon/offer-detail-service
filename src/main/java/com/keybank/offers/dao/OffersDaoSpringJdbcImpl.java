@@ -250,7 +250,7 @@ public class OffersDaoSpringJdbcImpl extends StoredProcedure implements RowMappe
         offersDao.setDescription(rs.getString(OffersDetailsConstant.OFFER_DESC));
         offersDao.setExpDate(rs.getString(OffersDetailsConstant.OFFER_EXPIRY_DATE));
         offersDao.setCreationDate(rs.getString(OffersDetailsConstant.OFFER_CREATION_DATE));
-        offersDao.setImageUrl(rs.getString(OffersDetailsConstant.OFFER_IMAGE_URL));
+        offersDao.setImageUrl(rs.getURL(OffersDetailsConstant.OFFER_IMAGE_URL).toString());
         offersDao.setStock(rs.getString(OffersDetailsConstant.OFFER_STOCK));
         offersDao.setOffersType(rs.getString(OffersDetailsConstant.OFFER_TYPE));
 

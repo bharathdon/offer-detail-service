@@ -16,6 +16,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
+
 @RestController
 @RequestMapping("/v1")
 @Tag(name = "offers details controller")
@@ -48,7 +50,7 @@ public class OfferDetailsController {
                                     @RequestHeader("channel_id") String channelId,
                                     @RequestHeader("request_id") String reuqestId,
                                     @RequestHeader("message_ts") String messageTimeStamp
-    ) throws OffersRequestInvalidException, SystemException, BussinessException {
+    ) throws OffersRequestInvalidException, SystemException, BussinessException, ParseException {
         OffersRequest offersRequest = new OffersRequest();
 
         offersRequest.setCvv(cvv);

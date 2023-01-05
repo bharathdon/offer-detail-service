@@ -8,7 +8,7 @@ public class OffersDetailsConstant {
     public static final String OFFER_NAME = "name";
     public static final String OFFER_DESC = "description";
     public static final String OFFER_EXPIRY_DATE = "expiry_date";
-    public static final String OFFER_IMAGE_URL = "image_url ";
+    public static final String OFFER_IMAGE_URL = "image_url";
     public static final String OFFER_CREATION_DATE = "create_date";
     public static final String OFFER_STOCK = "stock";
     public static final String OFFER_TYPE = "offer_type";

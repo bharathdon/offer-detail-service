@@ -7,8 +7,10 @@ import com.keybank.offers.model.OffersDaoResponse;
 import com.keybank.offers.model.OffersRequest;
 import com.keybank.offers.model.OffersResponse;
 
+import java.text.ParseException;
+
 public interface IOffersDetailsService {
 
-    public OffersResponse getOffers(OffersRequest offersRequest) throws SystemException, BussinessException;
+    public OffersResponse getOffers(OffersRequest offersRequest) throws SystemException, BussinessException, ParseException;
 
 }

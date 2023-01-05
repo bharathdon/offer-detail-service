@@ -62,7 +62,7 @@ public class OfferDetailsDaoImpl implements IOfferDetailsDao
                     OffersDao offersDao = new OffersDao();
                     offersDao.setOfferId(OffersDetailsConstant.OFFER_ID);
                     offersDao.setOffersType(OffersDetailsConstant.OFFER_TYPE);
-                   // offersDao.setImageUrl(OffersDetailsConstant.OFFER_IMAGE_URL);
+                    offersDao.setImageUrl(OffersDetailsConstant.OFFER_IMAGE_URL);
                     offersDao.setCreationDate(OffersDetailsConstant.OFFER_CREATION_DATE);
                     offersDao.setDescription(OffersDetailsConstant.OFFER_DESC);
                     offersDao.setExpDate(OffersDetailsConstant.OFFER_EXPIRY_DATE);
