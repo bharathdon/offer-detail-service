@@ -51,10 +51,7 @@ class OfferDetailsControllerTest {
 
 
         String path = "/v1/offers/1234567891234567/123/BHARATH/12-25";
-        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.post(path).header("client_id", "web")
-                .header("channel_id", "online")
-                .header("request_id", "123")
-                .header("message_TS", "12-23");
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get(path).header("client_id", "web").header("channel_id", "online").header("request_id", "123").header("message_TS", "12-23");
 
         MvcResult mvcResult = mockMvc.perform(requestBuilder).andReturn();
 
