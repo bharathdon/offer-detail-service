@@ -2,7 +2,6 @@ package com.keybank.offers.serviceclient;
 
 import com.keybank.offers.model.CardDetailsRequest;
 import com.keybank.offers.model.CardDetailsResponse;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -15,7 +14,7 @@ import java.util.UUID;
 
 
 @Component
-public class CardDetailsServiceImpl implements ICardDetailsServiceClient {
+public class CardDetailsServiceClientImpl implements ICardDetailsServiceClient {
 
    /* @Autowired
     private RestTemplate restTemplate;
@@ -43,7 +42,7 @@ public class CardDetailsServiceImpl implements ICardDetailsServiceClient {
     }
 
     public static void main(String[] args) {
-        CardDetailsServiceImpl cardDetailsService = new CardDetailsServiceImpl();
+        CardDetailsServiceClientImpl cardDetailsService = new CardDetailsServiceClientImpl();
 
         CardDetailsRequest cardDetailsRequest = new CardDetailsRequest();
         cardDetailsRequest.setCardNum("123456788");
