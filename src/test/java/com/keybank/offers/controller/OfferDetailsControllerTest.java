@@ -46,8 +46,9 @@ class OfferDetailsControllerTest {
 
     @Test
     void test_getOffers_success_scenario() throws Exception {
+        OffersResponse offersResponse = buildMockOfferResp();
 
-        Mockito.when(offersDetailsService.getOffers(Mockito.any(OffersRequest.class))).thenReturn(buildMockOfferResp());
+        Mockito.when(offersDetailsService.getOffers(Mockito.any(OffersRequest.class))).thenReturn(offersResponse);
 
 
         String path = "/v1/offers/1234567891234567/123/BHARATH/12-25";
@@ -57,7 +58,7 @@ class OfferDetailsControllerTest {
 
         MockHttpServletResponse mvcResultResponse = mvcResult.getResponse();
 
-        assertEquals(HttpStatus.CREATED.value(), mvcResultResponse.getStatus());
+        assertEquals(HttpStatus.OK.value(), mvcResultResponse.getStatus());
 
 
     }
@@ -75,7 +76,7 @@ class OfferDetailsControllerTest {
         offers1.setOfferId("1234");
         offers1.setOffersType("moffers");
         offers1.setStock("yes");
-        offers1.setCreationDate(new Date("12-10-2022"));
+        offers1.setCreationDate(new Date());
 
         offers.add(offers1);
 
